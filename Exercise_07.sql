@@ -1,3 +1,6 @@
+#Exercise: 7 (Serge I: 2002-11-02)
+#Get the models and prices for all commercially available products (of any type) produced by maker B.
+
 SELECT DISTINCT product.model, pc.price
 FROM product
 INNER JOIN pc ON product.model = pc.model
