@@ -6,6 +6,6 @@
 SELECT DISTINCT product.type, laptop.model, laptop.speed
 FROM laptop, product
 WHERE type = 'laptop' AND 
-      laptop.speed < ALL (SELECT speed
-                          FROM pc
-                         )
+      laptop.speed < (SELECT MIN(speed) 
+                      FROM pc
+                     )
